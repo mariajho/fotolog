@@ -1,12 +1,12 @@
 function agregaPosteo() {
-	var containerPosteos = documentElementById("contenedor-posteos");
-	var nombreFF = documento.getElementById("nombre").value;
-	var contenidoFF = documentElementById("cajaṕosteos").value;
-	var nuevoPost = documentElementById("div");
+	var containerPosteos = document.getElementById("contenedor-posteos");
+	var nombreFF = document.getElementById("nombre").value;
+	var contenidoFF = document.getElementById("cajaposteos").value;
+	var nuevoPost = document.createElement("div");
 	var contenedorNombre =document.createElement("strong");
 	var contenedorPost = document.createElement("p");
 	var separacion = document.createElement("hr");
-	var parrafCorazon = documentElement('p');
+	var parrafCorazon = document.createElement('p');
 	var i = document.createElement('i');
 
 	parrafCorazon.appendChild(i);
@@ -14,11 +14,11 @@ function agregaPosteo() {
 	i.setAttribute("class", "fa fa-heart");
 	i.setAttribute("arial-hidden", "true");
 
-	var nodoNombre = document.createTextNode(nombreFF + " escribio: ");
+	var nodoNombre = document.createTextNode(nombreFF + " escribio:");
 	var nodoPosteo = document.createTextNode(contenidoFF);
 
 	contenedorNombre.appendChild(nodoNombre);
-	contenedor.Post.appendChild(nodoPosteo);
+	contenedorPost.appendChild(nodoPosteo);
 	nuevoPost.appendChild(contenedorNombre);
 	nuevoPost.appendChild(contenedorPost);
 	nuevoPost.appendChild(parrafCorazon);
@@ -30,9 +30,6 @@ function agregaPosteo() {
 
 	nuevoPost.setAttribute("class", "posteo");
 	containerPosteos.appendChild(nuevoPost);
-	documentElementById("nombre").value = "";
-	documentElementById("cajaposteos").value = "";
-
-
-
+	document.getElementById("nombre").value = "";
+	document.getElementById("cajaposteos").value = "";
 }
